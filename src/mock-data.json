@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "codeMH": "EMA2013",
+        "name": "Lý thuyết điều khiển tự động",
+        "TC": 3,
+        "class":"EMA2013",
+        "teacher":"TS.Trần Cường Hưng",
+        "numberSV": 69,
+        "session": "Sáng",
+        "weekday": 2,
+        "period": "1-2",
+        "address": "307-GD2",
+        "quote": "CL"
+    }
+]
