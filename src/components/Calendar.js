@@ -5,104 +5,129 @@ import React, { useState } from "react";
 import BaseTable, { Column } from "react-base-table";
 import "react-base-table/styles.css";
 import "./Calendar.css";
-import { Table } from "antd";
+import { Space, Table, Tag } from "antd";
 import Select from "react-select";
+import { WarningFilled } from "@ant-design/icons";
 
-// import "antd/dist/antd.css";
 const defaultFilter = {
   teacher: "",
   year1: "",
   semester1: "",
 };
-export default function Calandar() {
-  const dataTest2 = timetabledetails;
-  const monday = dataTest2.filter((m) => m.day === "Thứ 2");
-  var period = [...new Set(dataTest2.map((e) => e.startPeriod))];
-  const monday1 = monday.map((e) => ({
-    le: e.lecturer,
-    ro: e.room,
-    co: e.course_name,
-    se: e.lession,
-  }));
-  console.log(monday1)
 
+export default function Calandar() {
   const dataDetail = timetabledetails;
   const [filter, setFilter] = useState(defaultFilter);
+
+  // const filterGiaoVien = (giaovien) => {
+  //   setFilter({ ...filter, teacher: giaovien.value});
+  // };
+
+  // const filterYear = (y) => {
+  //   setFilter({ ...filter, year1: y.value });
+  // };
+
+  // const filterSemester = (s) => {
+  //   setFilter({ ...filter, semester1: s.value });
+  // };
+
+  const filterChange = (field, data) => {
+    setFilter({ ...filter, [field]: data.value });
+  };
+
+  const [detail, setDetail] = useState(dataDetail);
+  var nam = dataDetail.map((e) => e.year);
+  var nam1 = [...new Set(nam)];
   var teacher1 = [...new Set(dataDetail.map((e) => e.lecturer))];
+  var ki1 = [...new Set(dataDetail.map((e) => e.semester))];
 
-  const filterGiaoVien = (giaovien) => {
-    setFilter({ ...filter, teacher: giaovien.value });
-  };
+  let dataFiltered = detail;
+  if (!!filter.teacher)
+    dataFiltered = dataFiltered.filter((item) =>
+      item.lecturer.toLowerCase().includes(filter.teacher.toLowerCase())
+    );
+  if (!!filter.year1)
+    dataFiltered = dataFiltered.filter((item) =>
+      item.year.includes(filter.year1)
+    );
+  if (!!filter.semester1)
+    dataFiltered = dataFiltered.filter((item) =>
+      item.semester.includes(filter.semester1)
+    );
 
-  const filterYear = (y) => {
-    setFilter({ ...filter, year1: y.value });
-  };
-
-  const filterSemester = (s) => {
-    setFilter({ ...filter, semester1: s.value });
-  };
-  const data1 = [
-    {
-      tiet: "1",
-      thu2: ["2","toan12", "thay duong", "102"],
-      thu3: null,
-      thu4: "toan14",
-      thu5: null,
-      thu6: "toan16",
-      thu7: null,
-      chunhat: null,
-    },
-    {
-      tiet: "2",
-      thu2: ['','','',''],
-      thu3: "toan23",
-      thu4: null,
-      thu5: null,
-      thu6: "tona26",
-      thu7: null,
-      chunhat: null,
-    },
-    {
-      tiet: "3",
-      thu2: ["3","toan32", "", "302"],
-      thu3: null,
-      thu4: "toan34",
-      thu5: "toan35",
-      thu6: "tona36",
-      thu7: "toan37",
-      chunhat: "toan3cn",
-    },
-    {
-      tiet: "4",
-      thu2: ['','','',''],
-      thu3: "toan43",
-      thu4: "toan44",
-      thu5: null,
-      thu6: "tona46",
-      thu7: "toan47",
-      chunhat: "toan4cn",
-    },
-    {
-      tiet: "5",
-      thu2: ['','','',''],
-      thu3: null,
-      thu4: "toan54",
-      thu5: null,
-      thu6: null,
-      thu7: "toan57",
-      chunhat: "toan5cn",
-    },
-    {
-      tiet: "6",
-      thu2: ["4","toan62", "thay duong", "602"],
+  let rong = [];
+  for (var i = 1; i <= 14; i++) {
+    rong.push({
+      // tiet: `${i} (${i+6}h-${i+6}h50)`,
+      tiet:<div>{`${i}`}<br/>{`${i+6}h-${i+6}h50`}</div>,
+      thu2: null,
       thu3: null,
       thu4: null,
       thu5: null,
       thu6: null,
       thu7: null,
-      chunhat: "toan5cn",
-    },
-  ];
+      thu8: null,
+    });
+  }
+  if (!!filter.teacher&&!!filter.year1&&!!filter.semester1) {
+    dataFiltered.forEach((item) => {
+      const thu = item.dayNum;
+      if (!!thu) {
+        const tietDau = item.startPeriod;
+        const tietCuoi = item.endPeriod;
+        for (var i = tietDau; i <= tietCuoi; i++) {
+          rong[i - 1][`thu${thu}`] = item;
+        }
+      }
+    });
+  } else rong = rong;
+
+  const renderColumn = (row) => {
+    if (!!row && row.startPeriod === 6) {
+      return (
+        <div style={{ backgroundColor: "lightblue" }}>
+          <div>{row?.course_name}</div>
+          <div>{row?.lecturer}</div>
+          <div>{row?.room}</div>
+        </div>
+      );
+    }
+    if (!!row && row.startPeriod === 10) {
+      return (
+        <div style={{ backgroundColor: "lightgreen" }}>
+          <div>{row?.course_name}</div>
+          <div>{row?.lecturer}</div>
+          <div>{row?.room}</div>
+        </div>
+      );
+    }
+    if (!!row && row.startPeriod === 1) {
+      return (
+        <div style={{ backgroundColor: "#a29bfe" }}>
+          <div>{row?.course_name}</div>
+          <div>{row?.lecturer}</div>
+          <div>{row?.room}</div>
+        </div>
+      );
+    }
+    if (!!row && row.startPeriod === 3) {
+      return (
+        <div style={{ backgroundColor: "#ffeaa7" }}>
+          <div>{row?.course_name}</div>
+          <div>{row?.lecturer}</div>
+          <div>{row?.room}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div style={{ backgroundColor: "lightgray" }}>
+          <div>{row?.course_name}</div>
+          <div>{row?.lecturer}</div>
+          <div>{row?.room}</div>
+        </div>
+      );
+    }
+  };
 
   const customStyles = {
     placeholder: (defaultStyles) => {
@@ -139,10 +164,7 @@ export default function Calandar() {
       cursor: "pointer",
     }),
   };
-  
-  var nam = dataDetail.map((e) => e.year);
-  var nam1 = [...new Set(nam)];
-  var ki1 = [...new Set(dataDetail.map((e) => e.semester))];
+
   // const columns = [
   //   {
   //     Header: "Tiết",
@@ -194,79 +216,7 @@ export default function Calandar() {
   //     style: { borderLeft: "1px solid black" },
   //   },
   // ];
-  const renderContent = (value, row, index) => {
-    const obj = {
-      children: value,
-      props: {},
-    };
-    return obj;
-  };
-  const columns = [
-    {
-      title: "Tiết",
-      dataIndex: "tiet",
-      render: renderContent,
-    },
-    {
-      title: "Thứ 2",
-      dataIndex: "thu2",
-      render: (value, row, index)=>{
-        if(value!==null){
-          return{
-            children: value,
-          }
-        }
-        if(value==null){
-          return {
-            
-          }
-        }
-        return value.name;
-      },
-      // render: thu2 => (
-      //   <>
-      //     {thu2.map(tag => {
-      //       return (
-      //         <p>
-      //           {tag[0]}
-      //         </p>
-      //       );
-      //     })}
-      //   </>
-      // ),
-      
-      },
-    {
-      title: "Thứ 3",
-      dataIndex: "thu3",
-      render: renderContent,
-    },
-    {
-      title: "Thứ 4",
-      dataIndex: "thu4",
-      render: renderContent,
-    },
-    {
-      title: "Thứ 5",
-      dataIndex: "thu5",
-      render: renderContent,
-    },
-    {
-      title: "Thứ 6",
-      dataIndex: "thu6",
-      render: renderContent,
-    },
-    {
-      title: "Thứ 7",
-      dataIndex: "thu7",
-      render: renderContent,
-    },
-    {
-      title: "Chủ nhật",
-      dataIndex: "chunhat",
-      render: renderContent,
-    },
-  ];
+
   return (
     <div style={{ overflow: "auto" }}>
       <div style={{ display: "flex" }}>
@@ -281,8 +231,8 @@ export default function Calandar() {
             label: item,
             value: item,
           }))}
-          placeholder="Giáo viên"
-          onChange={filterYear}
+          onChange={(value) => filterChange("year1", value)}
+          // onChange={value => filterYear(value)}
           styles={customStyles}
           className="select"
         />
@@ -305,8 +255,8 @@ export default function Calandar() {
             label: item,
             value: item,
           }))}
-          placeholder="Giáo viên"
-          onChange={filterSemester}
+          // onChange={filterSemester}
+          onChange={(value) => filterChange("semester1", value)}
           styles={customStyles}
           className="select"
         />
@@ -329,12 +279,17 @@ export default function Calandar() {
             label: item,
             value: item,
           }))}
-          placeholder="Giáo viên"
-          onChange={filterGiaoVien}
+          // onChange={filterGiaoVien}
+          onChange={(value) => filterChange("teacher", value)}
           styles={customStyles}
           className="select"
         />
         <button onClick={() => setFilter(defaultFilter)}>Reset</button>
+        {!filter.teacher && (
+          <div className="message">
+            <WarningFilled /> Bạn vui lòng chọn đầy đủ các mục năm học, học kì và giáo viên trước
+          </div>
+        )}
       </div>
       {/* <ReactTable
         data={data}
@@ -359,7 +314,51 @@ export default function Calandar() {
           };
         }}
       /> */}
-      <Table columns={columns} dataSource={data1} bordered pagination={false} />
+      <Table dataSource={rong} bordered pagination={false}>
+        <Column title="Tiết" dataIndex="tiet" width="2%" />
+        <Column
+          title="Thứ 2"
+          dataIndex="thu2"
+          render={(row) => renderColumn(row)}
+          width="13%"
+        />
+        <Column
+          title="Thứ 3"
+          dataIndex="thu3"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+        <Column
+          title="Thứ 4"
+          dataIndex="thu4"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+        <Column
+          title="Thứ 5"
+          dataIndex="thu5"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+        <Column
+          title="Thứ 6"
+          dataIndex="thu6"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+        <Column
+          title="Thứ 7"
+          dataIndex="thu7"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+        <Column
+          title="Chủ nhật"
+          dataIndex="thu8"
+          width="13%"
+          render={(row) => renderColumn(row)}
+        />
+      </Table>
     </div>
   );
 }

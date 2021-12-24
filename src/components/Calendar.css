@@ -1,22 +1,32 @@
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid black;
-    font-weight: normal;
-    table-layout: fixed;
-  }
-  
-  th, td {
-    text-align: center;
-    padding: 8px;
-    border: 1px solid black;
-  }
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid black;
+  font-weight: normal;
+  table-layout: fixed;
+}
 
-  td{
-      height: 25px;
-  }
-  tr:nth-child(even){background-color: white}
-  #tiet{
-      width: 90px;
-  }
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+td {
+  height: 25px;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+#tiet {
+  width: 90px;
+}
+.message {
+  margin: 10px 20px;
+  background: none;
+  width: 550px;
+  border-radius: 5px;
+  color:#eb4d4b;
+}

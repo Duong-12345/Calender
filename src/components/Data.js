@@ -364,7 +364,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k13",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3ce",
@@ -386,7 +387,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k13",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3cf",
@@ -408,7 +410,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k13",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3d0",
@@ -430,7 +433,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k13",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3d1",
@@ -452,7 +456,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k13",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3d2",
@@ -474,7 +479,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k13",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3d3",
@@ -492,11 +498,12 @@ export const timetabledetails = [
     room: "A6.303",
     note: null,
     __v: 0,
-    startPeriod: 6, 
-    endPeriod: 8,
+    startPeriod: 10, 
+    endPeriod: 14,
     code: "k14",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3d4",
@@ -518,7 +525,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k14",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 3,
   },
   {
     id: "60167c2b00feb83ff083a3d5",
@@ -536,11 +544,12 @@ export const timetabledetails = [
     room: "A6.402",
     note: null,
     __v: 0,
-    startPeriod: 6, 
-    endPeriod: 7,
+    startPeriod: 8, 
+    endPeriod: 10,
     code: "k14",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 7,
   },
   {
     id: "60167c2b00feb83ff083a3d6",
@@ -562,7 +571,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k14",
     year: "2021-2022",
-    semester:"1"
+    semester:"1",
+    dayNum: 4,
   },
   {
     id: "60167c2b00feb83ff083a3d7",
@@ -584,7 +594,8 @@ export const timetabledetails = [
     endPeriod: 4,
     code: "k14",
     year: "2021-2022",
-    semester:"2"
+    semester:"2",
+    dayNum: 4,
   },
   {
     id: "60167c2b00feb83ff083a3d8",
@@ -606,7 +617,8 @@ export const timetabledetails = [
     endPeriod: 7,
     code: "k14",
     year: "2021-2022",
-    semester:"3"
+    semester:"3",
+    dayNum: 3,
   },
   {
     id: "60167c2b00feb83ff083a3d9",
@@ -628,7 +640,8 @@ export const timetabledetails = [
     endPeriod: 9,
     code: "k14",
     year: "2021-2022",
-    semester:"1"
+    semester:"1",
+    dayNum: 3,
   },
   {
     id: "60167c2b00feb83ff083a3da",
@@ -650,7 +663,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k14",
     year: "2021-2022",
-    semester:"2"
+    semester:"2",
+    dayNum: 3,
   },
   {
     id: "60167c2b00feb83ff083a3db",
@@ -672,7 +686,8 @@ export const timetabledetails = [
     endPeriod: 5,
     code: "k15",
     year: "2021-2022",
-    semester:"3"
+    semester:"3",
+    dayNum: 8,
   },
   {
     id: "60167c2b00feb83ff083a3dc",
@@ -694,7 +709,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k15",
     year: "2021-2022",
-    semester:"1"
+    semester:"1",
+    dayNum: 3,
   },
   {
     id: "60167c2b00feb83ff083a3dd",
@@ -716,7 +732,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k15",
     year: "2021-2022",
-    semester:"2"
+    semester:"2",
+    dayNum: 4,
   },
   {
     id: "60167c2b00feb83ff083a3de",
@@ -738,7 +755,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k15",
     year: "2021-2022",
-    semester:"3"
+    semester:"3",
+    dayNum: 4,
   },
   {
     id: "60167c2b00feb83ff083a3df",
@@ -760,7 +778,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k15",
     year: "2021-2022",
-    semester:"1"
+    semester:"1",
+    dayNum: 6,
   },
   {
     id: "60167c2b00feb83ff083a3e0",
@@ -782,7 +801,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k15",
     year: "2021-2022",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3e1",
@@ -804,7 +824,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k15",
     year: "2021-2022",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c2b00feb83ff083a3e2",
@@ -826,7 +847,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k15",
     year: "2021-2022",
-    semester:"1"
+    semester:"1",
+    dayNum: 6,
   },
   {
     id: "60167c2b00feb83ff083a3e3",
@@ -848,7 +870,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k15",
     year: "2021-2022",
-    semester:"2"
+    semester:"2",
+    dayNum: 6,
   },
   {
     id: "60167c6c00feb83ff083a3e4",
@@ -870,7 +893,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k12",
     year: "2021-2022",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3e5",
@@ -892,7 +916,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k12",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3e6",
@@ -914,7 +939,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k12",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3e7",
@@ -936,7 +962,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k12",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3e8",
@@ -958,7 +985,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k12",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3e9",
@@ -980,7 +1008,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k11",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3ea",
@@ -1002,7 +1031,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k11",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3eb",
@@ -1024,7 +1054,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k11",
     year: "2020-2021",
-    semester:"1"
+    semester:"1",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3ec",
@@ -1046,7 +1077,8 @@ export const timetabledetails = [
     endPeriod: 7,
     code: "k11",
     year: "2020-2021",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id: "60167c6c00feb83ff083a3ed",
@@ -1068,7 +1100,8 @@ export const timetabledetails = [
     endPeriod: 2,
     code: "k11",
     year: "2020-2021",
-    semester:"3"
+    semester:"3",
+    dayNum: 4,
   },
   {
     id: "60167c6c00feb83ff083a3ee",
@@ -1090,7 +1123,8 @@ export const timetabledetails = [
     endPeriod: 4,
     code: "k11",
     year: "2022-2023",
-    semester:"1"
+    semester:"1",
+    dayNum: 4,
   },
   {
     id: "60167c6c00feb83ff083a3ef",
@@ -1112,7 +1146,8 @@ export const timetabledetails = [
     endPeriod: 7,
     code: "k11",
     year: "2022-2023",
-    semester:"2"
+    semester:"2",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3f0",
@@ -1134,7 +1169,8 @@ export const timetabledetails = [
     endPeriod: 9,
     code: "k10",
     year: "2022-2023",
-    semester:"3"
+    semester:"3",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3f1",
@@ -1156,7 +1192,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k10",
     year: "2022-2023",
-    semester:"1"
+    semester:"1",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3f2",
@@ -1178,7 +1215,8 @@ export const timetabledetails = [
     endPeriod: 5,
     code: "k10",
     year: "2022-2023",
-    semester:"2"
+    semester:"2",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3f3",
@@ -1200,7 +1238,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k10",
     year: "2022-2023",
-    semester:"3"
+    semester:"3",
+    dayNum: 3,
   },
   {
     id: "60167c6c00feb83ff083a3f3",
@@ -1222,7 +1261,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k14",
     year: "2022-2023",
-    semester:"1"
+    semester:"1",
+    dayNum: 4,
   },
   {
     id: "60167c6c00feb83ff083a3f5",
@@ -1244,7 +1284,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k14",
     year: "2022-2023",
-    semester:"2"
+    semester:"2",
+    dayNum: 4,
   },
   {
     id: "60167c6c00feb83ff083a3f6",
@@ -1266,7 +1307,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k14",
     year: "2022-2023",
-    semester:"3"
+    semester:"3",
+    dayNum: 6,
   },
   {
     id: "60167c6c00feb83ff083a3f7",
@@ -1288,7 +1330,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k14",
     year: "2022-2023",
-    semester:"1"
+    semester:"1",
+    dayNum: 2,
   },
   {
     id:"60167c6c00feb83ff083a3f8",
@@ -1310,7 +1353,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k10",
     year: "2022-2023",
-    semester:"2"
+    semester:"2",
+    dayNum: 2,
   },
   {
     id:"60167c6c00feb83ff083a3f9",
@@ -1332,7 +1376,8 @@ export const timetabledetails = [
     endPeriod: 3,
     code: "k10",
     year: "2022-2023",
-    semester:"3"
+    semester:"3",
+    dayNum: 6,
   },
   {
     id: "60167c6c00feb83ff083a3fa",
@@ -1354,7 +1399,8 @@ export const timetabledetails = [
     endPeriod: 8,
     code: "k10",
     year: "2022-2023",
-    semester:"1"
+    semester:"1",
+    dayNum: 6,
   },
   {
     id: "618b2cf566a3252398be9c42",
